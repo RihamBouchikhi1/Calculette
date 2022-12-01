@@ -17,7 +17,6 @@ namespace Calculette
             InitializeComponent();
         }
 
-        string Totale;
         int N1;
         int N2;
         string Option;
@@ -27,54 +26,80 @@ namespace Calculette
         {
            
         }
+
+        private void RESULT_TextChanged(object sender, EventArgs e)
+        {
+          
+        }
         private void Btn_Num0_Click(object sender, EventArgs e)
         {
+            RESULT.Text += Btn_Num0.Text;
+            TxtDisplay.Clear();
             TxtDisplay.Text += Btn_Num0.Text;
         }
         
         private void Btn_Num1_Click(object sender, EventArgs e)
         {
+            RESULT.Text += Btn_Num1.Text;
+            TxtDisplay.Clear();
             TxtDisplay.Text += Btn_Num1.Text;
         }
 
         private void Btn_Num2_Click(object sender, EventArgs e)
         {
+            RESULT.Text += Btn_Num2.Text;
+            TxtDisplay.Clear();
             TxtDisplay.Text += Btn_Num2.Text;
         }
 
         private void Btn_Num3_Click(object sender, EventArgs e)
         {
+            RESULT.Text += Btn_Num3.Text;
+            TxtDisplay.Clear();
             TxtDisplay.Text += Btn_Num3.Text;
         }
 
         private void Btn_Num4_Click(object sender, EventArgs e)
         {
+            RESULT.Text += Btn_Num4.Text;  
+            TxtDisplay.Clear();
             TxtDisplay.Text += Btn_Num4.Text;
         }
 
         private void Btn_Num5_Click(object sender, EventArgs e)
         {
+            RESULT.Text += Btn_Num5.Text;  
+            TxtDisplay.Clear();
             TxtDisplay.Text += Btn_Num5.Text;
         }
         private void Btn_Num6_Click(object sender, EventArgs e)
         {
+            RESULT.Text += Btn_Num6.Text;  
+            TxtDisplay.Clear();
             TxtDisplay.Text += Btn_Num6.Text;
         }
         private void Btn_Num7_Click(object sender, EventArgs e)
         {
+            RESULT.Text += Btn_Num7.Text;
+            TxtDisplay.Clear();
             TxtDisplay.Text += Btn_Num7.Text;
         }
         private void Btn_Num8_Click(object sender, EventArgs e)
         {
+            RESULT.Text += Btn_Num8.Text;
+            TxtDisplay.Clear();
             TxtDisplay.Text += Btn_Num8.Text;
         }
         private void Btn_Num9_Click(object sender, EventArgs e)
         {
+            RESULT.Text += Btn_Num9.Text;
+            TxtDisplay.Clear();
             TxtDisplay.Text += Btn_Num9.Text;
         }
         private void Btn_Addition_Click(object sender, EventArgs e)
         {
             Option = "+";
+            RESULT.Text += Option;
             N1 = int.Parse(TxtDisplay.Text);
             TxtDisplay.Clear();
         }
@@ -82,20 +107,22 @@ namespace Calculette
         private void Btn_Sustraction_Click(object sender, EventArgs e)
         {
             Option = "-";
+            RESULT.Text += Option;
             N1 = int.Parse(TxtDisplay.Text);
             TxtDisplay.Clear();
         }
         private void Btn_Multiplication_Click(object sender, EventArgs e)
         {
             Option = "x";
+            RESULT.Text += Option;
             N1 = int.Parse(TxtDisplay.Text);
             TxtDisplay.Clear();
         }
         private void Btn_Division_Click(object sender, EventArgs e)
         {
             Option = "÷";
+            RESULT.Text += Option;
             N1 = int.Parse(TxtDisplay.Text);
-           
             TxtDisplay.Clear();
         }
         private void Btn_Egale_Click(object sender, EventArgs e)
@@ -116,7 +143,8 @@ namespace Calculette
                 resultat = N1 / N2;
 
             TxtDisplay.Text = "= " + resultat;
-
+            RESULT.Text += "= " + resultat;
+            RESULT.Clear();
         }
 
         private void Btn_Vergule_Click(object sender, EventArgs e)
@@ -146,6 +174,7 @@ namespace Calculette
 
         private void Btn_Supprimer_Click(object sender, EventArgs e)
         {
+            RESULT.Clear();
             TxtDisplay.Clear();
             resultat = 0;
             N1 = 0;
@@ -153,11 +182,14 @@ namespace Calculette
 
         }
 
+        private void Btn_CE_Click(object sender, EventArgs e)
+        {
+
+        }
         private void TxtDisplay_TextChanged(object sender, EventArgs e)
         {
 
         }
-
        
     }
 }
